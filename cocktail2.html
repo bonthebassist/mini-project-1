@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- regular CSS link -->
+    <link href="cocktail.css" rel="stylesheet">
+    <title>Fancy a Cocktail?</title>
+    <!-- Link to local javascript -->
+    <script type="text/javascript" src="cocktailCards.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.1/iconify-icon.min.js"></script>
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&family=Rock+Salt&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrap">
+        <h1>Fancy a Cocktail? <iconify-icon inline icon="fontisto:cocktail"></iconify-icon>
+        </h1>
+    </div>
+    <main>
+        <div class="container" id="buttons-container">
+
+            <div class="row height d-flex justify-content-center align-items-center">
+
+                <div class="left col-sm-12 col-md-12 col-lg-12">
+                    <form id="searchForm" class="form-inline">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <input type="text" name="searchText" id="searchInpu" class="form-control"
+                                    placeholder="Search by ingredient, eg: Vodka" value="">
+                                <div class="input-group-btn">
+                                    <button id="searchButton" class="btn btn-primary search-button-height " onclick="searchByIngredient()"
+                                        type="button">
+                                        <iconify-icon inline icon="fa:search"></iconify-icon>
+                                    </button>
+                                    <button class="btn btn-warning" type="button" onclick="surpriseMeButton()">Surprise
+                                        Me</button>
+                                    <button class="btn btn-dark" type="button" onclick="seeAllButton()">See all
+                                    </button>
+                                    <button id="hide-all-cocktails" class="btn btn-light " type="button"
+                                        style="display:none" onclick="hideAllButton()">Hide all cocktails</button>
+                                </div>
+                            </div>
+                            </div>
+                                <div id="invalidSearch"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="sbl-circ-ripple col-lg-12" id="loading" style="display:none"></div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="container-fluid">
+                <div class="row" id="found-cocktails"></div>
+                <div class="row" id="random-cocktail"></div>
+                <div class="row" id="cocktail-cards"></div>
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>
+
+<template id="card-template">
+    <div class="card col-lg-3 col-md-6 col-sm-12">
+        <img class="card-image card-image-top" src="">
+        <div class="card-body">
+            <div class="card-title"></div>
+            <div class="card-text"></div>
+            <div class="card-subtitle"></div>
+        </div>
+    </div>
+</template>
+
+<!-- <template id="surprise-card-template">
+    <div class="card col-lg-3 col-md-6 col-sm-12" id="surprise-card">
+        <img class="card-image card-img-left" src="" id="surprise-card-image">
+        <div class="card-body">
+            <div class="card-title" id="surprise-card-title"></div>
+            <div class="card-text" id="surprise-card-text"></div>
+            <div class="card-subtitle" id="surprise-card-text2"></div>
+        </div>
+    </div>
+</template> -->
+
+<template id="surprise-card-template">
+<div class="card flex-row " id="surprise-card">
+    <img class="card-image card-image-sm card-img-sm-top card-img-left example-card-img-responsive" src="https://images.immediate.co.uk/production/volatile/sites/30/2013/05/Singapore-sling-7ddad3e.jpg?quality=90&webp=true&resize=300,272"/>
+    <div class="card-body">
+      <h4 class="card-title h5 h4-sm"></h4>
+      <p class="card-text"></p>
+      <p class="card-subtitle"></p>
+    </div>
+</div>
+</template>
+
+<template id="found-card-template">
+    <div class="card col-lg-3 col-md-6 col-sm-12">
+        <img class="card-image card-img-top" src="">
+        <div class="card-body">
+            <div class="card-title"></div>
+            <div class="card-text"></div>
+            <div class="card-subtitle"></div>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,113 @@
+/* Styling Divs */
+.wrap {
+    display:flex;
+    background: url(https://png.pngtree.com/background/20210711/original/pngtree-summer-gradient-orange-juice-black-background-picture-image_1128883.jpg) center center / cover no-repeat ;
+    height: 30vh;
+    width: 100%;
+    text-align: center;
+}
+
+.wrap h1 {
+    align-self:flex-end;
+    color:#eee;
+    font-family: "Rock Salt", cursive;
+    font-size: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .5);
+    padding: 10px 10px 10px 20px;
+}
+
+#buttons-container{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#invalidSearch {
+    margin-top: 40px;
+    font-weight: bold;
+}
+
+body{
+    background-color:#eee;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+   }
+.floating-left{
+    float:left
+}
+.floating-right{
+    float:right;
+}
+/* styling cards */
+.card-title {
+    font-size: 16px;
+    font-weight: bold;
+}
+.card {
+    margin-bottom: 10px;
+}
+
+.card-text {
+    margin-bottom: 10px;
+    text-align: justify;
+}
+.card-subtitle {
+    margin-bottom: 10px;
+    text-align: justify;
+}
+.card-image {
+    max-width: 200px;
+    max-height: 100%;
+}
+
+.card-image-sm {
+    width:100%
+}
+.flex-row {
+    padding:0px;
+}
+
+/* Loading image */
+
+#loading {
+    margin-left: auto;
+    margin-right: auto;
+    height: 40px;
+}
+
+   .sbl-circ-ripple {
+    height: 48px;
+    width: 48px;
+    color: #5a5a5a;
+    border-radius: 50%;
+    position: relative;
+    display: inline-block; }
+    .sbl-circ-ripple::after, .sbl-circ-ripple::before {
+      content: '';
+      height: 0;
+      width: 0;
+      border: inherit;
+      border: 5px solid;
+      border-radius: inherit;
+      position: absolute;
+      left: 40%;
+      top: 40%;
+      animation: circle-ripple  1s linear infinite; }
+    .sbl-circ-ripple::before {
+      animation-delay: -0.5s; }
+  
+  @keyframes circle-ripple {
+    0% {
+      height: 0;
+      width: 0;
+      left: 20px;
+      top: 20px; }
+    100% {
+      height: 48px;
+      width: 48px;
+      left: -5px;
+      top: -5px;
+      opacity: 0; } }
